@@ -33,3 +33,10 @@
       - ansible_distribution == "Debian"
       - ansible_distribution_version ==  "10"
       - ansible_architecture == "x86_64"
+
+  - name: "For OS: Debian 12, Arch: amd64"
+    import_tasks: debian-12-amd64.yml
+    when:
+      - ansible_distribution == "Debian"
+      - ansible_distribution_version ==  "12"
+      - ansible_architecture == "x86_64"
